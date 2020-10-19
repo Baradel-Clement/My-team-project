@@ -1,16 +1,18 @@
 // 1 - HELPERS
-@import './1\ -\ Helpers/mixins';
-@import './1\ -\ Helpers/variables';
+@import "./1\ -\ Helpers/variables";
+@import "./1\ -\ Helpers/base";
+@import "./1\ -\ Helpers/mixins";
+@import "./1\ -\ Helpers/placeholder";
 
 // 2 - BASICS
-@import './2\ -\ Basics/base';
-@import './2\ -\ Basics/buttons';
-@import './2\ -\ Basics/typography';
+@import "./2\ -\ Basics/buttons";
+@import "./2\ -\ Basics/typography";
 
 // 3 - LAYOUT
-
-@import './3\ -\ Layout/navbar';
+@import "./3\ -\ Layout/main-container";
+@import "./3\ -\ Layout/navbar";
+@import "./3\ -\ Layout/hero";
 // 4 - PAGES
-@import './4\ -\ Pages/about';
-@import './4\ -\ Pages/contact';
-@import './4\ -\ Pages/index';
+@import "./4\ -\ Pages/about";
+@import "./4\ -\ Pages/contact";
+@import "./4\ -\ Pages/index";

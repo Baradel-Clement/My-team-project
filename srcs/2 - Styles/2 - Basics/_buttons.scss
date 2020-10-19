@@ -1,10 +1,12 @@
-button {
+.button {
     width: 151px;
     height: 46px;
     border-radius: 24px;
     background: transparent;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    font-size: 18px;
+    @extend %flex-center-center;
 }
 
 .button-primary-light {

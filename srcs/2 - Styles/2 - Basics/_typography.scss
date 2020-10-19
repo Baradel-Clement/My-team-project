@@ -1,51 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
 
 body {
-    color: $dark-green;
-    font-family: 'Livvic';
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 0px;
-    text-align: left;
+  color: $dark-green;
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 .big-font-body {
-    font-size: 18px;
-    line-height: 28px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .little-body {
-    font-size: 15px;
-    line-height: 25px;
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .big-header {
-    font-size: 100px;
-    font-weight: 700;
-    line-height: 100px;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 100px;
 }
 
 .medium-header {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 56px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
 }
 
 h2 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 48px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
 }
 
 h3 {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
 }
 
 button {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 28px;
-    font-family: 'Livvic';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  font-family: "Livvic";
+}
+
+.white {
+  color: white;
+}
+
+.light-coral {
+  color: $light-coral;
 }

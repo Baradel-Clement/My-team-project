@@ -1,0 +1,14 @@
+.hero {
+    @include flex(flex, row nowrap, space-between, flex-start);
+    background-color: $midnight-green;
+}
+
+.hero-home {
+    width: 100%;
+    height: 579px;
+}
+
+.hero-wrap-outer {
+    @include flex();
+    
+}
