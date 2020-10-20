@@ -57,3 +57,31 @@ button {
 .light-coral {
   color: $light-coral;
 }
+
+.rapture-blue {
+  color: $rapture-blue;
+}
+
+@media screen and (max-width: 1200px) {
+  .big-font-body {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .big-header {
+    font-size: 64px;
+    line-height: 56px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .big-header {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}

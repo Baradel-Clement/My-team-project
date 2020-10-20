@@ -109,6 +109,8 @@ section {
 body {
   line-height: 1;
   overflow-x: hidden;
+  position: relative;
+  z-index: -4;
 }
 ol,
 ul {

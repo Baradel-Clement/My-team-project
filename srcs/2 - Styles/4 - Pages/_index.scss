@@ -1,0 +1,295 @@
+// MANAGE TEAM SECTION // 
+
+.manage-team-section {
+    width: 100%;
+    height: 684px;
+    @include flex(flex, row, center, center);
+    background-color: $sacramento;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.manage-team-section::after {
+    content: '';
+    @include absolute-el(unset, -100px, 0px, unset);
+    background-image: url(/images/bg-pattern-home-3.svg);
+    width: 200px;
+    height: 244px;
+    z-index: 0;
+}
+
+.outer-manage {
+    width: 1100px;
+    height: 404px;
+    @include flex(flex, row, space-between, flex-start);
+    position: relative;
+}
+
+.outer-manage::before {
+    content: '';
+    @include absolute-el(0px, unset, unset, 0px);
+    background: $light-coral;
+    width: 50px;
+    height: 4px;
+}
+
+.manage-title {
+    height: 100%;
+    width: 445px;   
+}
+
+.manage-title > h2 {
+    margin-top: 54px; 
+}
+
+.manage-cards {
+    height: 100%;
+    width: 540px;
+    @include flex(flex, column nowrap, space-between, flex-start);
+    z-index: 1;
+}
+
+.manage-card {
+    width: 100%;
+    height: 94px;
+    @include flex(flex, row, space-between, center);
+}
+
+.manage-card-picture {
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.manage-card:first-child .manage-card-picture {
+    background-image: url(/images/icon-person.svg);
+}
+
+.manage-card:nth-child(2) .manage-card-picture {
+    background-image: url(/images/icon-cog.svg);
+}
+
+.manage-card:last-child .manage-card-picture {
+    background-image: url(/images/icon-chart.svg);
+}
+
+.manage-card-desc {
+    width: 445px;
+    height: 94px;
+    @include flex(flex, column, space-between, flex-start);
+}
+
+@media screen and (max-width: 1200px) {
+    .manage-team-section {
+        height: 710px;
+    }
+    
+    .manage-team-section::after {
+        @include absolute-el(0px, -100px, unset, unset);
+    }
+    
+    .outer-manage {
+        width: 573px;
+        height: 510px;
+        @include flex(flex, column, space-between, flex-start);
+    }
+    
+    .manage-title {
+        height: 64px;
+        width: 445px;
+    }
+    
+    .manage-title > h2 {
+        margin-top: 32px; 
+    }
+    
+    .manage-cards {
+        height: 346px;
+        width: 100%;
+    }
+    
+    .manage-card {
+        width: 100%;
+        height: 94px;
+    }
+    
+    .manage-card-desc {
+        width: 478px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .manage-team-section {
+        height: 1073px;
+    }
+    
+    .outer-manage {
+        width: 327px;
+        height: 941px;
+    }
+    
+    .manage-title {
+        height: 160px;
+        width: 240px;   
+    }
+    
+    .manage-title > h2 {
+        margin-top: 32px; 
+    }
+    
+    .manage-cards {
+        height: 693px;
+        width: 100%;
+        @include flex(flex, column nowrap, space-between, center);
+    }
+    
+    .manage-card {
+        height: 199px;
+        @include flex(flex, column, space-between, center);
+    }
+    
+    .manage-card-desc {
+        width: 100%;
+        height: 111px;
+        @include flex(flex, column, space-between, flex-start);
+        text-align: center;
+    }
+
+    .manage-card-desc > p {
+        width: 100%;
+    }
+}
+
+// SUCESS STORIES SECTION // 
+
+.sucess-stories-section {
+    width: 100%;
+    height: 745px;
+    background-color: $midnight-green;
+    @include flex(flex, row, center, center);
+    overflow: hidden;
+    position: relative;
+}
+
+.sucess-stories-section::before {
+    content: '';
+    @include absolute-el(0px, unset, unset, 0px);
+    width: 147px;
+    height: 100px;
+    background-image: url(/images/bg-pattern-home-4-about-3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sucess-stories-section::after {
+    content: '';
+    @include absolute-el(unset, 0px, 0px, unset);
+    width: 200px;
+    height: 100px;
+    background-image: url(/images/bg-pattern-home-5.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sucess-stories-outer {
+    width: 1110px;
+    height: 465px;
+    @include flex(flex, column, space-between, center);
+}
+
+.sucess-stories-title {
+    text-align: center;
+    width: 932px;
+    height: 96px;
+}
+
+.sucess-stories {
+    width: 100%;
+    height: 313px;
+    @include flex(flex, row nowrap, space-between, center);
+}
+
+.sucess-storie {
+    width: 350px;
+    height: 100%;
+    @include flex(flex, column, flex-start, center);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.sucess-storie::before {
+    content: '';
+    @include absolute-el(0px, unset, unset, unset);
+    z-index: 0;
+    background-image: url(/images/icon-quotes.svg);
+    width: 67px;
+    height: 56px;
+}
+
+.sucess-storie p:first-child {
+    position: relative;
+    z-index: 1;
+    height: 100px;
+    margin-top: 36px;
+    background: transparent;
+}
+
+.sucess-storie p:nth-child(2) {
+    margin-top: 24px;
+    height: 28px;
+}
+
+.sucess-storie p:nth-child(3) {
+    height: 18px;
+}
+
+.sucess-storie img:last-child {
+    width: 62px;
+    height: 62px;
+    border: 2px solid #C4FFFE;
+    border-radius: 50%;
+    margin-top: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+    .sucess-stories-section {
+        height: 1199px;
+    }
+    
+    .sucess-stories-outer {
+        width: 573px;
+        height: 999px;
+    }
+    
+    .sucess-stories-title {
+        width: 100%;
+    }
+    
+    .sucess-stories {
+        height: 855px;
+        @include flex(flex, column nowrap, space-between, center);
+    }
+    
+    .sucess-storie {
+        width: 100%;
+        height: 253px;
+        @include flex(flex, column, flex-start, center);
+    }
+
+    .sucess-storie p:first-child {
+        width: 100%;
+        height: 75px;
+    }
+    
+    .sucess-storie p:nth-child(2) {
+        margin-top: 16px;
+    }
+    
+    .sucess-storie img:last-child {
+        border: 2px solid #C4FFFE;
+        border-radius: 50%;
+        margin-top: 16px;
+    }
+}
