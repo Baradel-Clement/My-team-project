@@ -288,8 +288,36 @@
     }
     
     .sucess-storie img:last-child {
-        border: 2px solid #C4FFFE;
-        border-radius: 50%;
         margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sucess-stories-section {
+        height: 1410px;
+    }
+    
+    .sucess-stories-outer {
+        width: 96%;
+        height: 1106px;
+    }
+    
+    .sucess-stories-title {
+        width: 100%;
+        height: 128px;
+    }
+    
+    .sucess-stories {
+        height: 930px;
+    }
+    
+    .sucess-storie {
+        width: 100%;
+        height: 278px;
+    }
+
+    .sucess-storie p:first-child {
+        width: 100%;
+        height: 100px;
     }
 }

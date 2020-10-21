@@ -14,3 +14,14 @@ menuBtn.addEventListener('click', () => {
 });
 
 // Navbar end
+
+// Directors cards //
+
+const directorsBtn = document.querySelectorAll('.directors-card-button');
+
+directorsBtn.forEach(directorBtn => {
+    directorBtn.addEventListener('click', () => {
+        directorBtn.previousElementSibling.classList.toggle('active');
+        directorBtn.classList.toggle('active')
+    })
+})

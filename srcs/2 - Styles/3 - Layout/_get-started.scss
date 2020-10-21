@@ -1,0 +1,45 @@
+.get-started-section {
+    width: 100%;
+    height: 200px;
+    @include flex(flex, row, center, center);
+    background-color: $light-coral;
+    position: relative;
+}
+
+.get-started-section::before {
+    content:'';
+    @include absolute-el(unset, unset, 0px, 0px);
+    background-image: url(/images/bg-pattern-home-6-about-5.svg);
+    width: 200px;
+    height: 122px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.get-started-outer {
+    width: 917px;
+    height: 48px;
+    @include flex(flex, row, space-between, center);
+}
+
+@media screen and (max-width: 1200px) {
+    .get-started-outer {
+        width: 573px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .get-started-section {
+        height: 302px;
+    }
+    
+    .get-started-outer {
+        width: 223px;
+        height: 153px;
+        @include flex(flex, column, space-between, center);
+    }
+
+    .get-started-outer > h2 {
+        text-align: center;
+    }
+}

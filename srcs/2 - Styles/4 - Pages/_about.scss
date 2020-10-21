@@ -1,0 +1,418 @@
+// DIRECTORS SECTION
+
+.directors-section {
+    width: 100%;
+    height: 1002px;
+    @include flex(flex, row nowrap, center, center);
+    position: relative;
+    overflow: hidden;
+    background-color: $jungle-green;
+}
+
+.directors-section::before {
+    content: '';
+    @include absolute-el(0px, unset, unset, -100px);
+    width: 200px;
+    height: 200px;
+    background-image: url(/images/bg-pattern-about-2-contact-1.svg);
+}
+
+.directors-section::after {
+    content: '';
+    @include absolute-el(unset, 0px, 0px, unset);
+    width: 147px;
+    height: 100px;
+    background-image: url(/images/bg-pattern-home-4-about-3.svg);
+}
+
+.directors-outer {
+    width: 1110px;
+    height: 722px;
+    @include flex(flex, column nowrap, space-between, center);
+    text-align: center;
+}
+
+.directors-outer > h2 {
+    width: 920px;
+    height: 48px;
+}
+
+.directors-cards {
+    width: 100%;
+    height: 610px;
+    @include flex(flex, row wrap, space-between, center);
+}
+
+.directors-card {
+    width: 350px;
+    height: 253px;
+    @include flex(flex, row, center, center);
+    background-color: $sacramento;
+    position: relative;
+}
+
+.directors-card-overview {
+    width: 100%;
+    height: 100%;
+    @include flex(flex, column nowrap, flex-start, center);
+    padding-top: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.directors-card-overview img:first-child {
+    width: 96px;
+    height: 96px;
+    border: 2px solid #C4FFFE;
+    border-radius: 50%;
+}
+
+.directors-card-overview p:nth-child(2),  .directors-card-overview p:last-child {
+    width: 302px;
+}
+
+.directors-card-overview p:nth-child(2) {
+    margin-top: 16px;
+}
+
+.directors-card-overview p:last-child {
+    font-style: italic;
+}
+
+.directors-card-details {
+    position: absolute;
+    top: 0px;
+    width: 350px;
+    height: 0px;
+    opacity: 0;
+    z-index: 0;
+    padding: 35px 48px 0px 48px;
+    pointer-events: none;
+    background-color: $dark-green;
+    @include flex(flex, column, flex-start, center);
+    transition: 0.2s ease-in-out;
+}
+
+.directors-card-details p:first-child {
+    height: 28px;
+}
+
+.directors-card-details p:nth-child(2) {
+    margin-top: 8px;
+    height: auto;
+}
+
+.directors-card-details-social {
+    width: 60px;
+    height: 20px;
+    margin-top: 24px;
+    @include flex(flex, inline-flex, space-between, center)
+}
+
+.directors-card-button {
+    width: 56px;
+    height: 56px;
+    z-index: 3;
+    @include absolute-el(unset, unset, -24px, unset);
+    background-color: $light-coral;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.directors-card-button:hover {
+    background-color: $rapture-blue;
+}
+
+.directors-card-button.active {
+    background-color: $rapture-blue;
+    transform: rotateZ(135deg);
+}
+
+.directors-card-button.active:hover {
+    background-color: $light-coral;
+}
+
+.directors-card-button-horizontal {
+    width: 16px;
+    height: 4px;
+    background-color: $sacramento;
+    position: absolute;
+    top: 26px;
+    left: 20px;
+}
+
+.directors-card-button-vertical {
+    height: 16px;
+    width: 4px;
+    background-color: $sacramento;
+    position: absolute;
+    top: 20px;
+    left: 26px;
+}
+
+.directors-card-details.active {
+    height: 253px;
+    opacity: 1;
+    z-index: 2;
+    pointer-events: all;
+    transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1200px) {
+    .directors-section {
+        height: 1219px;
+    }
+    
+    .directors-outer {
+        width: 573px;
+        height: 1019px;
+    }
+    
+    .directors-outer > h2 {
+        width: 445px;
+        height: 32px;
+    }
+    
+    .directors-cards {
+        height: 939px;
+    }
+    
+    .directors-card {
+        width: 281px;
+    }
+    
+    .directors-card-overview {
+        @include flex(flex, column nowrap, flex-start, center);
+    }
+    
+    .directors-card-overview p:nth-child(2),  .directors-card-overview p:last-child {
+        width: 233px;
+    }
+    
+    .directors-card-details {
+        width: 281px;
+        padding: 35px 35px 0px 24px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .directors-section {
+        height: 2062px;
+    }
+    
+    .directors-section::before {
+        @include absolute-el(-100px, unset, unset, -100px);
+        z-index: 0;
+    }
+    
+    .directors-outer {
+        width: 327px;
+        height: 1886px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .directors-outer > h2 {
+        width: 327px;
+        height: 32px;
+    }
+    
+    .directors-cards {
+        height: 1806px;
+        @include flex(flex, column, space-between, center);
+    }
+    
+    .directors-card {
+        width: 327px;
+    }
+    
+    .directors-card-overview p:nth-child(2), .directors-card-overview p:last-child {
+        width: 279px;
+    }
+    
+    .directors-card-details {
+        width: 327px;
+        padding: 35px 24px 0px 24px;
+    }
+}
+
+// DIRECTORS SECTION ENDED
+
+// CLIENTS SECTION
+
+.clients-section {
+    height: 437px;
+    width: 100%;
+    position: relative;
+    @include flex(flex, row, center, center);
+    background-color: $sacramento;
+    overflow: hidden;
+}
+
+.clients-section::before {
+    content: '';
+    @include absolute-el(0px, unset, unset, 0px);
+    background-image: url(/images/bg-pattern-about-4.svg);
+    width: 200px;
+    height: 200px;
+}
+
+.clients-outer {
+    width: 1100px;
+    height: 157px;
+    @include flex(flex, column, space-between, center);
+    position: relative;
+    z-index: 2;
+}
+
+.clients-outer > h2 {
+    text-align: center;
+    height: 48px;
+}
+
+.clients-images {
+    width: 100%;
+    height: 45px;
+    @include flex(flex, row nowrap, space-between, center);
+}
+
+.clients-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.clients-image:first-child {
+    width: 165px;
+    height: 28px;
+    background-image: url(/images/logo-the-verge.png);
+}
+
+.clients-image:nth-child(2) {
+    width: 184px;
+    height: 23px;
+    background-image: url(/images/logo-jakarta-post.png);
+}
+
+.clients-image:nth-child(3) {
+    width: 180px;
+    height: 28px;
+    background-image: url(/images/logo-the-guardian.png);
+}
+
+.clients-image:nth-child(4) {
+    width: 165px;
+    height: 28px;
+    background-image: url(/images/logo-tech-radar.png);
+}
+
+.clients-image:last-child {
+    width: 98px;
+    height: 45px;
+    background-image: url(/images/logo-gadgets-now.png);
+}
+
+@media screen and (max-width: 1200px) {
+    .clients-section {
+        height: 308px;
+    }
+    
+    .clients-section::before {
+        @include absolute-el(-100px, unset, unset, 0px);
+    }
+    
+    .clients-outer {
+        width: 689px;
+        height: 108px;
+    }
+    
+    .clients-outer > h2 {
+        height: 32px;
+    }
+    
+    .clients-images {
+        width: 100%;
+        height: 28px;
+    }
+    
+    .clients-image:first-child {
+        width: 103px;
+        height: 17px;
+    }
+    
+    .clients-image:nth-child(2) {
+        width: 114px;
+        height: 14px;
+    }
+    
+    .clients-image:nth-child(3) {
+        width: 112px;
+        height: 17px;
+    }
+    
+    .clients-image:nth-child(4) {
+        width: 103px;
+        height: 17px;
+    }
+    
+    .clients-image:last-child {
+        width: 61px;
+        height: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .clients-section {
+        height: 632px;
+    }
+    
+    .clients-section::before {
+        @include absolute-el(-100px, unset, unset, -100px);
+    }
+    
+    .clients-outer {
+        width: 327px;
+        height: 456px;
+    }
+    
+    .clients-outer > h2 {
+        height: 32px;
+    }
+    
+    .clients-images {
+        height: 360px;
+        width: 162px;
+        @include flex(flex, column nowrap, space-between, center);
+    }
+    
+    .clients-image:first-child {
+        width: 165px;
+        height: 28px;
+        background-image: url(/images/logo-the-verge.png);
+    }
+    
+    .clients-image:nth-child(2) {
+        width: 184px;
+        height: 23px;
+        background-image: url(/images/logo-jakarta-post.png);
+    }
+    
+    .clients-image:nth-child(3) {
+        width: 180px;
+        height: 28px;
+        background-image: url(/images/logo-the-guardian.png);
+    }
+    
+    .clients-image:nth-child(4) {
+        width: 165px;
+        height: 28px;
+        background-image: url(/images/logo-tech-radar.png);
+    }
+    
+    .clients-image:last-child {
+        width: 98px;
+        height: 45px;
+        background-image: url(/images/logo-gadgets-now.png);
+    }
+}

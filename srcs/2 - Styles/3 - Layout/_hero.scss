@@ -1,12 +1,20 @@
 .hero {
     @include flex(flex, row nowrap, center, flex-start);
     background-color: $midnight-green;
+    overflow: hidden;
 }
 
 .hero-home {
     width: 100%;
     height: 579px;
     padding-top: 136px;
+    position: relative;
+}
+
+.hero-about {
+    width: 100%;
+    height: 396px;
+    padding-top: 120px;
     position: relative;
 }
 
@@ -19,7 +27,16 @@
     z-index: 0;
 }
 
-.hero-desc::after {
+.hero-about::after {
+    content: '';
+    @include absolute-el(unset, -100px, 0px, unset);
+    background-image: url(/images/bg-pattern-about-1-mobile-nav-1.svg);
+    width: 200px;
+    height: 200px;
+    z-index: 0;
+}
+
+.hero-home > .hero-wrap-outer > .hero-desc::after {
     content: '';
     @include absolute-el(unset, 0px, -243px, unset);
     background-image: url(/images/bg-pattern-home-2.svg);
@@ -33,30 +50,60 @@
     height: 200px;
 }
 
+.hero-about > .hero-wrap-outer {
+    width: 1110px;
+    height: 156px;
+}
+
 .hero-wrap-outer {
     @include flex(flex, row, space-between, center);
     position: relative;
     z-index: 1;
 }
 
-.hero-wrap-outer > h1 {
+.hero-home > .hero-wrap-outer > h1 {
     width: 620px;
     height: 200px;
 }
 
+.hero-about > .hero-wrap-outer > h1 {
+    width: 379px;
+    height: 100px;
+}
+
+.hero-wrap-outer {
+    position: relative;
+    @include flex(flex, row, flex-start, center)
+}
+
 .hero-desc {
     position: relative;
+    @include flex(flex, row, flex-start, flex-end);
+}
+
+.hero-home > .hero-wrap-outer > .hero-desc {
     width: 445px;
     height: 200px;
-    @include flex(flex, row, flex-start, flex-end)
+}
+
+.hero-about > .hero-wrap-outer > .hero-desc {
+    width: 730px;
+    height: 156px;
 }
 
 .hero-desc::before {
     content: '';
     @include absolute-el(0px, unset, unset, 0px);
-    background-color: $rapture-blue;
     width: 50px;
     height: 4px;
+}
+
+.hero-home > .hero-wrap-outer > .hero-desc::before {
+    background-color: $rapture-blue;
+}
+
+.hero-about > .hero-wrap-outer > .hero-desc::before {
+    background-color: $light-coral;
 }
 
 @media screen and (max-width: 1200px) {
@@ -64,40 +111,57 @@
         height: 588px;
         padding-top: 112px;
     }
+
+    .hero-about {
+        height: 444px;
+        padding-top: 122px;
+    }
     
     .hero-home::before {
         display: none;
     }
     
-    .hero-desc::after {
-        @include absolute-el(unset, 0px, -232px, unset);
+    .hero-home > .hero-wrap-outer > .hero-desc::after {
+        @include absolute-el(unset, 47px, -256px, unset);
     }
     
     .hero-home > .hero-wrap-outer {
         width: 92%;
-        height: 244px;
+        height: 220px;
+    }
+
+    .hero-about > .hero-wrap-outer {
+        width: 92%;
+        height: 220px;
     }
     
     .hero-wrap-outer {
         @include flex(flex, column, space-between, center);
-    }
-    
-    .hero-wrap-outer > h1 {
-        width: 339px;
-        height: 112px;
         text-align: center;
     }
     
-    .hero-desc {
+    .hero-home > .hero-wrap-outer > h1 {
         width: 339px;
+        height: 112px;
+    }
+
+    .hero-about > .hero-wrap-outer > h1 {
+        width: 100%;
+        height: 56px;
+    }
+    
+    .hero-home > .hero-wrap-outer > .hero-desc {
+        width: 457px;
         height: 84px;
         @include flex(flex, row, flex-start, flex-end)
     }
 
-    .hero-desc > p {
-        text-align: center;
+    .hero-about > .hero-wrap-outer > .hero-desc {
+        width: 457px;
+        height: 140px;
+        @include flex(flex, row, flex-start, flex-end)
     }
-    
+
     .hero-desc::before {
         display: none;
     }
@@ -109,30 +173,54 @@
         padding-top: 80px;
         overflow-x: hidden;
     }
-    
-    .hero-desc::after {
-        @include absolute-el(unset, 0px, -197px, unset);
+
+    .hero-about {
+        height: 440px;
+        padding-top: 80px;
+    }
+
+    .hero-about::after {
+        @include absolute-el(unset, -100px, -100px, unset);
     }
     
+    .hero-home > .hero-wrap-outer > .hero-desc::after {
+        @include absolute-el(unset, -10px, -197px, unset);
+    }
+
     .hero-home > .hero-wrap-outer {
         width: 96%;
         height: 210px;
+    }
+
+    .hero-about > .hero-wrap-outer {
+        width: 96%;
+        height: 252px;
     }
     
     .hero-wrap-outer {
         @include flex(flex, column, space-between, center);
     }
     
-    .hero-wrap-outer > h1 {
+    .hero-home > .hero-wrap-outer > h1 {
         width: 339px;
         height: 80px;
         text-align: center;
     }
+
+    .hero-about > .hero-wrap-outer > h1 {
+        width: 327px;
+        height: 40px;
+    }
     
-    .hero-desc {
+    .hero-home > .hero-wrap-outer > .hero-desc {
         width: 339px;
         height: 112px;
         @include flex(flex, row, flex-start, flex-end)
+    }
+
+    .hero-about > .hero-wrap-outer > .hero-desc {
+        width: 327px;
+        height: 196px;
     }
 
     .hero-desc > p {

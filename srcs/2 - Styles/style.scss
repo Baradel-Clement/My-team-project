@@ -5,13 +5,16 @@
 @import "./1\ -\ Helpers/placeholder";
 
 // 2 - BASICS
-@import "./2\ -\ Basics/buttons";
 @import "./2\ -\ Basics/typography";
+@import "./2\ -\ Basics/buttons";
+@import "./2\ -\ Basics/social-icon";
 
 // 3 - LAYOUT
 @import "./3\ -\ Layout/main-container";
 @import "./3\ -\ Layout/navbar";
 @import "./3\ -\ Layout/hero";
+@import './3\ -\ Layout/get-started';
+@import './3\ -\ Layout/footer';
 // 4 - PAGES
 @import "./4\ -\ Pages/about";
 @import "./4\ -\ Pages/contact";

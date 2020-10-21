@@ -1,0 +1,41 @@
+.social-icon {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    transition: 0.16s ease-in-out;
+    cursor: pointer;
+}
+
+.social-icon-facebook {
+    background-image: url(/images/icon-facebook.svg);
+}
+
+.social-icon-pinterest {
+    background-image: url(/images/icon-pinterest.svg);
+}
+
+.social-icon-twitter {
+    background-image: url(/images/icon-twitter.svg);
+    width: 24px;
+    height: 20px;
+}
+
+.social-icon-linkedin {
+    background-image: url(/images/icon-linkedin.svg);
+}
+
+.social-icon-facebook:hover {
+    background-image: url(/images/icon-facebook-color.svg);
+}
+
+.social-icon-pinterest:hover {
+    background-image: url(/images/icon-pinterest-color.svg);
+}
+
+.social-icon-twitter:hover{
+    background-image: url(/images/icon-twitter-color.svg);
+}
+
+.social-icon-linkedin:hover {
+    background-image: url(/images/icon-linkedin-color.svg);
+}

@@ -50,6 +50,10 @@ button {
   font-family: "Livvic";
 }
 
+.opacity6 {
+  opacity: 0.6;
+}
+
 .white {
   color: white;
 }
@@ -60,6 +64,10 @@ button {
 
 .rapture-blue {
   color: $rapture-blue;
+}
+
+.sacramento {
+  color: $sacramento;
 }
 
 @media screen and (max-width: 1200px) {
@@ -80,7 +88,7 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-  .big-header {
+  .big-header, .medium-header {
     font-size: 40px;
     line-height: 40px;
   }
