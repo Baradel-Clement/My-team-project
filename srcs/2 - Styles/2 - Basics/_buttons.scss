@@ -30,3 +30,14 @@
     background-color: $sacramento;
     transition: 0.3s ease-in-out;
 }
+
+.button-secondary-light {
+    color: $dark-green;
+    background-color: white;
+}
+
+.button-secondary-light:hover {
+    color: $dark-green;
+    background-color: $rapture-blue;
+    transition: 0.3s ease-in-out;
+}

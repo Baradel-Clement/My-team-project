@@ -38,9 +38,9 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 48px;
 }
 
 button {
@@ -48,6 +48,17 @@ button {
   font-weight: 600;
   line-height: 28px;
   font-family: "Livvic";
+}
+
+input, textarea {
+  font-family: 'Livvic';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -0.11538461595773697px;
+  text-align: left;
+  color: white;
 }
 
 .opacity6 {

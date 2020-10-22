@@ -1,0 +1,312 @@
+.contact {
+    width: 100%;
+    height: 692px;
+    background-color: $midnight-green;
+    @include flex(flex, row, center, center);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.contact::after {
+    content: '';
+    @include absolute-el(unset, -100px, 0px, unset);
+    background-image:url(/images/bg-pattern-contact-2.svg);
+    width: 200px;
+    height: 224px;
+}
+
+.contact::before {
+    content: '';
+    @include absolute-el(120px, unset, unset, -100px);
+    background-image: url(/images/bg-pattern-about-2-contact-1.svg);
+    width: 200px;
+    height: 200px;
+}
+
+.contact-outer {
+   width: 1112px; 
+   height: 428px;
+   @include flex(flex, row, space-between, flex-end);
+   position: relative;
+}
+
+.contact-text {
+    width: 540px;
+    height: 428px;
+    @include flex(flex, column, flex-end, flex-start)
+}
+
+.contact-text-header {
+    width: 100%;
+    height: 136px;
+    @include flex(flex, column, space-between, flex-start);
+    margin-bottom: 32px;
+}
+
+.contact-text-qualities {
+    width: 100%;
+    height: 232px;
+    @include flex(flex, column, space-between, flex-start);
+}
+
+.contact-text-quality {
+    height: 72px;
+    width: 100%;
+    @include flex(flex, row, flex-start, center)
+}
+
+.contact-text-quality > img {
+    margin-right: 23px;
+}
+
+.contact-form {
+    width: 542px;
+    height: 420px;
+}
+
+.contact-form form {
+    @include flex(flex, column, space-between, flex-start);
+    width: 100%;
+    height: 420px;
+}
+
+.form-item {
+    @include flex(flex, column, space-between, center);
+    height: 42px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+
+.form-item.valid {
+    border-bottom: 1px solid $rapture-blue;
+}
+
+.form-item.nonvalid {
+    border-bottom: 1px solid $light-coral;
+}
+
+form .form-item:nth-child(5)  {
+    height: 84px;
+}
+
+.form-item label {
+    opacity: 0.6;
+}
+
+.form-item input, .form-item textarea {
+    width: 100%;
+    background-color: transparent !important;
+    border: none;
+    outline: none;
+    position: absolute;
+    width: 96%;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-item input:placeholder-shown, .form-item textarea:placeholder-shown {
+    font-family: 'Livvic';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.11538461595773697px;
+    text-align: left;    
+    background-color: transparent !important;
+}
+
+#submit {
+    color: $sacramento;
+    background-color: white;
+    width: 123px;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.20s ease-in-out;
+}
+
+#submit:hover {
+    background-color: $rapture-blue;
+    transition: 0.20s ease-in-out;
+}
+
+.form-item p {
+    display: none;
+}
+
+.form-item p.active {
+    display: block;
+    @include absolute-el(unset, unset, -20px, 13px);
+    height: 13px;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 13px;
+}
+
+@media screen and (max-width: 1200px) {
+    .contact {
+        height: 1092px;
+    }
+    
+    .contact::after {
+        @include absolute-el(unset, -100px, 0px, unset);
+    }
+    
+    .contact::before {
+        @include absolute-el(65px, unset, unset, -100px);
+    }
+    
+    .contact-outer {
+       width: 542px; 
+       height: 868px;
+       @include flex(flex, column, space-between, center);
+    }
+    
+    .contact-text {
+        width: 100%;
+        height: 384px;
+        @include flex(flex, column, space-between, center)
+    }
+    
+    .contact-text-header {
+        width: 248px;
+        height: 128px;
+        @include flex(flex, column, space-between, center);
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        height: 1052px;
+    }
+    
+    .contact::after {
+        @include absolute-el(unset, -100px, -100px, unset);
+    }
+    
+    .contact::before {
+        display: none;
+    }
+    
+    .contact-outer {
+       width: 327px; 
+       height: 884px;
+    }
+    
+    .contact-text {
+        width: 100%;
+        height: 400px;
+        @include flex(flex, column, space-between, center)
+    }
+    
+    .contact-text-header {
+        width: 100%;
+        height: 104px;
+        @include flex(flex, column, space-between, center);
+        margin-bottom: 40px;
+    }
+    
+    .contact-text-qualities {
+        width: 100%;
+        height: 264px;
+    }
+    
+    .contact-form {
+        width: 100%;
+    }
+    
+    .contact-form form {
+        @include flex(flex, column, space-between, flex-start);
+        width: 100%;
+        height: 420px;
+    }
+    
+    .form-item {
+        @include flex(flex, column, space-between, center);
+        height: 42px;
+        width: 100%;
+        position: relative;
+        border-bottom: 1px solid white;
+    }
+    
+    
+    .form-item.valid {
+        border-bottom: 1px solid $rapture-blue;
+    }
+    
+    .form-item.nonvalid {
+        border-bottom: 1px solid $light-coral;
+    }
+    
+    form .form-item:nth-child(5)  {
+        height: 84px;
+    }
+    
+    .form-item label {
+        opacity: 0.6;
+    }
+    
+    .form-item input, .form-item textarea {
+        width: 100%;
+        background-color: transparent !important;
+        border: none;
+        outline: none;
+        position: absolute;
+        width: 96%;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    .form-item input:placeholder-shown, .form-item textarea:placeholder-shown {
+        font-family: 'Livvic';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: -0.11538461595773697px;
+        text-align: left;    
+        background-color: transparent !important;
+    }
+    
+    #submit {
+        color: $sacramento;
+        background-color: white;
+        width: 123px;
+        height: 48px;
+        border-radius: 24px;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.20s ease-in-out;
+    }
+    
+    #submit:hover {
+        background-color: $rapture-blue;
+        transition: 0.20s ease-in-out;
+    }
+    
+    .form-item p {
+        display: none;
+    }
+    
+    .form-item p.active {
+        display: block;
+        @include absolute-el(unset, unset, -20px, 13px);
+        height: 13px;
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 13px;
+    }
+}

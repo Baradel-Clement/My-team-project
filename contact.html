@@ -10,7 +10,122 @@
 </head>
 
 <body>
-
+    <header>
+        <nav>
+            <img src="./images/logo.svg" alt="logo">
+            <ul class="nav-links">
+                <li class="nav-link-item">
+                    <a class="nav-link big-font-body" href="index.html">home</a>
+                </li>
+                <li class="nav-link-item">
+                    <a class="nav-link big-font-body" href="about.html">about</a>
+                </li>
+                <li class="nav-link-item">
+                    <a class="button button-primary-light" href="contact.html">contact us</a>
+                </li>
+            </ul>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+            <div class="mobile-nav-block">
+                <ul class="nav-links-mobile">
+                    <li class="mobile-nav-link-item">
+                        <a class="mobile-nav-link big-font-body" href="index.html">home</a>
+                    </li>
+                    <li class="mobile-nav-link-item">
+                        <a class="mobile-nav-link big-font-body" href="about.html">about</a>
+                    </li>
+                    <li class="mobile-nav-link-item">
+                        <a class="mobile-nav-link button button-primary-light" href="contact.html">contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="contact">
+                <div class="contact-outer">
+                    <div class="contact-text">
+                        <div class="contact-text-header">
+                            <h1 class="medium-header white">Contact</h1>
+                            <h3 class="light-coral">Ask us about</h3>
+                        </div>
+                        <div class="contact-text-qualities">
+                            <div class="contact-text-quality">
+                                <img src="/images/icon-person.svg" alt="icon-person">
+                                <p class="white big-font-body">The quality of our talent network</p>
+                            </div>
+                            <div class="contact-text-quality">
+                                <img src="/images/icon-cog.svg" alt="icon-cog">
+                                <p class="white big-font-body">Usage & implementation of our software</p>
+                            </div>
+                            <div class="contact-text-quality">
+                                <img src="/images/icon-chart.svg" alt="icon-chart">
+                                <p class="white big-font-body">How we help drive innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="contact.html" id="contact-form">
+                            <div class="form-item">
+                                <label class="little-body white" for="name"></label>
+                                <input type="text" id="name" placeholder="Name">
+                                <p class="light-coral">This field is required</p>
+                            </div>
+                            <div class="form-item">
+                                <label class="little-body white" for="mail"></label>
+                                <input type="email" id='email' placeholder="Email Adress">
+                                <p class="light-coral">Email format is not valid</p>
+                            </div>
+                            <div class="form-item">
+                                <label class="little-body white" for="company-name"></label>
+                                <textarea id="company-name" placeholder="Company Name"></textarea>
+                                <p class="light-coral">This field is required</p>
+                            </div>
+                            <div class="form-item">
+                                <label class="little-body white" for="title"></label>
+                                <textarea id="title" placeholder="Title"></textarea>
+                                <p class="light-coral">This field is required</p>
+                            </div>
+                            <div class="form-item">
+                                <label class="little-body white" for="message"></label>
+                                <textarea placeholder="Message" id="message" cols="3" rows="3"></textarea>
+                                <p class="light-coral">This field is required</p>
+                            </div>
+                            <button id="submit" type="submit" form="contact-form">submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-outer white">
+            <div class="footer-nav-logo">
+                <img src="/images/logo.svg" alt="logo">
+                <div class="footer-nav">
+                    <a class="nav-link big-font-body" href="index.html">home</a>
+                    <a class="nav-link big-font-body" href="about.html">about</a>
+                </div>
+            </div>
+            <ul class="footer-contact-list">
+                <li class="footer-contact-item little-body opacity6">987 Hillcrest Lane</li>
+                <li class="footer-contact-item little-body opacity6">Irvine, CA</li>
+                <li class="footer-contact-item little-body opacity6">California 92714</li>
+                <li class="footer-contact-item little-body opacity6">Call Us : 949-833-7432</li>
+            </ul>
+            <div class="footer-social-copyright">
+                <div class="footer-social">
+                    <span class="social-icon social-icon-facebook"></span>
+                    <span class="social-icon social-icon-pinterest"></span>
+                    <span class="social-icon social-icon-twitter"></span>
+                </div>
+                <p class="little-body opacity6">Copyright 2020. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/srcs/1 - Scripts/app.js"></script>
 </body>
 
 </html>
